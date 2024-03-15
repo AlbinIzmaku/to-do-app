@@ -1,9 +1,10 @@
 "use client";
 
-import BottomArrow from "@/svg/bottomArrow";
-import styles from "@/styles/mySelect.module.css";
 import { useState } from "react";
+import Link from "next/link";
+import BottomArrow from "@/svg/bottomArrow";
 import UpperArrow from "@/svg/upperArrow";
+import styles from "@/styles/mySelect.module.css";
 
 export default function MySelect() {
   const [isOpen, setIsOpen] = useState(false);
@@ -12,14 +13,10 @@ export default function MySelect() {
     setIsOpen(!isOpen);
   }
   return (
-    <div className={styles.mainDiv}>
-      <div className={styles.div}>
-        <div className={styles.all}>
-          <input type="text" className={styles.input} />
-          <span
-            style={{ width: "1px", height: "20px", backgroundColor: "#f7f7f7" }}
-          />
-        </div>
+    <div className={styles.searchContainer}>
+      <div className={styles.search}>
+        <input type="text" className={styles.input} />
+        <span />
         {isOpen ? (
           <UpperArrow handleClick={handleClick} />
         ) : (
@@ -27,13 +24,17 @@ export default function MySelect() {
         )}
       </div>
       {isOpen && (
-        <div className={styles.listContainer}>
-          <ul className={styles.list}>
-            <li>All</li>
-            <li>Complete</li>
-            <li>Incomplete</li>
-          </ul>
-        </div>
+        <ul className={styles.list}>
+          <li>
+            <Link href="">All</Link>
+          </li>
+          <li>
+            <Link href="">Complete</Link>
+          </li>
+          <li>
+            <Link href="">Incomplete</Link>
+          </li>
+        </ul>
       )}
     </div>
   );

@@ -1,29 +1,38 @@
+"use client";
+
 import Search from "@/svg/search";
-import styles from "@/app/page.module.css";
 import MySelect from "@/components/mySelect";
+import styles from "@/app/page.module.css";
+import Moon from "@/svg/moon";
+import { useState } from "react";
+import Light from "@/svg/light";
+import MyButton from "@/components/myButton";
 
 export default function Home() {
+  const [isDarkMode, setIsDarkMode] = useState(false);
+
+  function toggleTheme() {
+    setIsDarkMode(!isDarkMode);
+  }
+
   return (
-    <main className={styles.main}>
+    <main className={`${isDarkMode ? styles.darkMain : styles.lightMain}`}>
       <h1>TODO LIST</h1>
       <section>
-        <div className={styles.search}>
-          <input className={styles.searchInput} placeholder="Search note..." />
-          <Search className={styles.icon} />
+        <div className={styles.searchContainer}>
+          <input className={styles.search} placeholder="Search note..." />
+          <Search className={styles.searchIcon} />
         </div>
-        <div className={styles.allContainer}>
-          {/* <select className={styles.select}>
-            <option>All</option>
-            <option>Complete</option>
-            <option>Incomplete</option>
-          </select> */}
+        <div className={styles.selectContainer}>
           <MySelect />
-        {/* <button>Save</button>  <button>Save</button> */}
+          {isDarkMode ? (
+            <Light toggleTheme={toggleTheme} />
+          ) : (
+            <Moon toggleTheme={toggleTheme} />
+          )}
         </div>
-        {/* <div>
-          <button>NEW NOTE +</button>
-        </div> */}
       </section>
+      <MyButton />
     </main>
   );
 }
