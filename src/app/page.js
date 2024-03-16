@@ -7,9 +7,13 @@ import Moon from "@/svg/moon";
 import { useState } from "react";
 import Light from "@/svg/light";
 import MyButton from "@/components/myButton";
+import Edit from "@/svg/edit";
+import Delete from "@/svg/delete";
+import List from "@/components/list";
 
 export default function Home() {
   const [isDarkMode, setIsDarkMode] = useState(false);
+
 
   function toggleTheme() {
     setIsDarkMode(!isDarkMode);
@@ -17,10 +21,10 @@ export default function Home() {
 
   return (
     <main className={`${isDarkMode ? styles.darkMain : styles.lightMain}`}>
-      <h1>TODO LIST</h1>
-      <section>
+      <h1 className={styles.h1}>TODO LIST</h1>
+      <section className={styles.mainSection}>
         <div className={styles.searchContainer}>
-          <input className={styles.search} placeholder="Search note..." />
+          <input className={styles.search} placeholder="Search note..." autoFocus />
           <Search className={styles.searchIcon} />
         </div>
         <div className={styles.selectContainer}>
@@ -33,6 +37,9 @@ export default function Home() {
         </div>
       </section>
       <MyButton />
+      <section>
+        <List />
+      </section>
     </main>
   );
 }
