@@ -32,7 +32,12 @@
   display: flex;
   justify-content: space-between;
 }
-
 .hr {
   border-bottom: 1px solid #6c63ff;
+}
+.edit:hover > path {
+  stroke: #6c63ff;
+}
+.delete:hover > path {
+  stroke: #e50000;
 }
