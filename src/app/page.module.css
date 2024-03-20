@@ -1,18 +1,30 @@
 .lightMain {
-  width: 92vw;
+  width: 100vw;
+
+  height: 100vh;
+  padding: 8vw;
   margin: 0 auto;
-  /* background-color: #f7f7f7; */
   color: #6c63ff;
+  background-color: #f7f7f7;
 }
 .darkMain {
-  width: 92vw;
+  width: 100vw;
+  height: 100vh;
+  padding: 8vw;
   margin: 0 auto;
   background-color: #252525;
   color: #f7f7f7;
 }
+
 .h1 {
   margin-top: 30px;
   text-align: center;
+  color: #252525;
+  font-weight: 500;
+}
+.darkText {
+  color: #f7f7f7;
+  background-color: #252525;
 }
 .mainSection {
   margin: 20px 0;
@@ -28,8 +40,10 @@
   font-family: Inter;
   font-size: 16px;
   font-weight: 500;
-  color: #6c63ff;
-  background-color: #f7f7f7;
+  /* color: #6c63ff; */
+  color: inherit;
+  /* background-color: #f7f7f7; */
+  background-color: inherit;
   border: 1px solid #6c63ff;
   border-radius: 5px;
   padding: 0 46px;

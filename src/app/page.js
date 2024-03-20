@@ -8,8 +8,6 @@ import { useEffect, useState } from "react";
 import Light from "@/svg/light";
 import MyButton from "@/components/myButton";
 import List from "@/components/list";
-import Aa from "./aa";
-import True from "@/svg/true";
 
 let nextId = 4;
 export default function Home() {
@@ -19,20 +17,26 @@ export default function Home() {
     {
       id: 0,
       text: "Read recommended book",
+      checked: false,
     },
     {
       id: 1,
       text: "Vacation planning",
+      checked: false,
     },
     {
       id: 2,
       text: "Cook dinner",
+      checked: false,
     },
     {
       id: 3,
       text: "Sign up for training",
+      checked: false,
     },
   ]);
+  const [searchQuery, setSearchQuery] = useState("");
+  const [values, setValues] = useState("All");
 
   function toggleTheme() {
     setIsDarkMode(!isDarkMode);
@@ -56,24 +60,36 @@ export default function Home() {
     setClick(!click);
   }
 
+  function handleValues(value) {
+    setValues(value);
+  }
+
   useEffect(() => {
     localStorage.setItem("notes", JSON.stringify(notes));
   }, [notes]);
 
+  const filtredNotes = notes.filter((note) =>
+    note.text.toLowerCase().includes(searchQuery.toLowerCase())
+  );
+
   return (
     <main className={`${isDarkMode ? styles.darkMain : styles.lightMain}`}>
-      <h1 className={styles.h1}>TODO LIST</h1>
+      <h1 className={`${styles.h1} ${isDarkMode ? styles.darkText : ""}`}>
+        TODO LIST
+      </h1>
       <section className={styles.mainSection}>
         <div className={styles.searchContainer}>
           <input
             className={styles.search}
             placeholder="Search note..."
             autoFocus
+            value={searchQuery}
+            onChange={(e) => setSearchQuery(e.target.value)}
           />
           <Search className={styles.searchIcon} />
         </div>
         <div className={styles.selectContainer}>
-          <MySelect />
+          <MySelect values={values} handleValues={handleValues} />
           {isDarkMode ? (
             <Light toggleTheme={toggleTheme} />
           ) : (
@@ -88,7 +104,30 @@ export default function Home() {
         notes={notes}
       />
       <section>
-        <List notes={notes} setNotes={setNotes} />
+        {values === "All" && (
+          <List
+            notes={filtredNotes}
+            setNotes={setNotes}
+            values={values}
+            isDarkMode={isDarkMode}
+          />
+        )}
+        {values === "Complete" && (
+          <List
+            notes={filtredNotes}
+            setNotes={setNotes}
+            values={values}
+            isDarkMode={isDarkMode}
+          />
+        )}
+        {values === "Incomplete" && (
+          <List
+            notes={filtredNotes}
+            setNotes={setNotes}
+            values={values}
+            isDarkMode={isDarkMode}
+          />
+        )}
       </section>
     </main>
   );
