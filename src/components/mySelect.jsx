@@ -6,7 +6,7 @@ import BottomArrow from "@/svg/bottomArrow";
 import UpperArrow from "@/svg/upperArrow";
 import styles from "@/styles/mySelect.module.css";
 
-export default function MySelect({ values, handleValues }) {
+export default function MySelect({ options, handleOptions }) {
   const [isOpen, setIsOpen] = useState(false);
 
   function handleClick() {
@@ -16,7 +16,7 @@ export default function MySelect({ values, handleValues }) {
   return (
     <div className={styles.searchContainer}>
       <div className={styles.search}>
-        <input type="text" defaultValue={values} className={styles.input} />
+        <input type="text" defaultValue={options} className={styles.input} />
         <span />
         {isOpen ? (
           <UpperArrow handleClick={handleClick} />
@@ -28,7 +28,7 @@ export default function MySelect({ values, handleValues }) {
         <ul className={styles.list}>
           <li
             onClick={() => {
-              handleValues("All");
+              handleOptions("All");
               setIsOpen(!isOpen);
             }}
           >
@@ -36,7 +36,7 @@ export default function MySelect({ values, handleValues }) {
           </li>
           <li
             onClick={() => {
-              handleValues("Complete");
+              handleOptions("Complete");
               setIsOpen(!isOpen);
             }}
           >
@@ -44,7 +44,7 @@ export default function MySelect({ values, handleValues }) {
           </li>
           <li
             onClick={() => {
-              handleValues("Incomplete");
+              handleOptions("Incomplete");
               setIsOpen(!isOpen);
             }}
           >

@@ -1,11 +1,11 @@
 import Delete from "@/svg/delete";
 import Edit from "@/svg/edit";
-import styles from "@/styles/list.module.css";
 import { useState } from "react";
 import True from "@/svg/true";
 import X from "@/svg/x";
+import styles from "@/styles/list.module.css";
 
-export default function List({ notes, setNotes, values, isDarkMode }) {
+export default function List({ notes, setNotes, options, isDarkMode }) {
   const [editingNoteId, setEditingNoteId] = useState(null);
   const [editedNotes, setEditedNotes] = useState({});
   const [logos, setLogos] = useState(true);
@@ -57,7 +57,7 @@ export default function List({ notes, setNotes, values, isDarkMode }) {
     setLogos(true);
   }
 
-  if (values === "Complete") {
+  if (options === "Complete") {
     return (
       <ul className={styles.list}>
         {notes
@@ -117,7 +117,7 @@ export default function List({ notes, setNotes, values, isDarkMode }) {
       </ul>
     );
   }
-  if (values === "Incomplete") {
+  if (options === "Incomplete") {
     return (
       <ul className={styles.list}>
         {notes

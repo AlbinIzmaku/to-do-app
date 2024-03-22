@@ -1,0 +1,93 @@
+.card {
+  position: fixed;
+  top: 35px;
+  left: 50%;
+  transform: translate(-50%);
+  width: 92vw;
+  max-width: 500px;
+  height: 40vh;
+  min-height: 300px;
+  background-color: #f7f7f7;
+  border: 1px solid transparent;
+  border-radius: 16px;
+  border: 1px solid black;
+  /* transition: background-color 0.2s ease-in-out, border 0.2s ease-in-out,
+    transform 0.2s ease-in-out, -webkit-transform 0.2s ease-in-out; */
+}
+.darkCard {
+  background-color: #252525;
+  border: 1px solid #f7f7f7;
+}
+.h2 {
+  color: #252525;
+  font-size: 24px;
+  font-weight: 500;
+  text-align: center;
+  margin: 10px 0 25px 0;
+}
+.darkText {
+  color: #f7f7f7;
+  background-color: #252525;
+}
+.secondDiv {
+  width: 90%;
+  height: 30vh;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.input {
+  width: 100%;
+  height: 40px;
+  font-family: Inter;
+  font-size: 16px;
+  font-weight: 500;
+  color: #6c63ff;
+  background-color: #f7f7f7;
+  border: 1px solid #6c63ff;
+  border-radius: 5px;
+  padding: 0 16px;
+  outline: 3px solid transparent;
+  transition: outline 0.2s ease;
+  margin: 0 auto;
+}
+.input:focus {
+  outline: 3px solid #6c63ff66;
+}
+.buttons {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  margin: 0 auto;
+}
+.cancle {
+  background-color: initial;
+  border: 1px solid #6c63ff;
+  color: #6c63ff;
+  border-radius: 5px;
+  cursor: pointer;
+  font-family: Kanit;
+  font-size: 18px;
+  font-weight: 500;
+  height: 40;
+  padding: 8px 22px;
+  transition: color 0.2s ease-in-out, background-color 0.2s ease-in-out;
+}
+.cancle:focus {
+  color: #f7f7f7;
+  background-color: #6c63ff;
+}
+.apply {
+  background-color: #6c63ff;
+  border: 1px solid #6c63ff;
+  color: #f7f7f7;
+  border-radius: 5px;
+  cursor: pointer;
+  font-family: Kanit;
+  font-size: 18px;
+  font-weight: 500;
+  height: 40;
+  padding: 8px 22px;
+  transition: color 0.2s ease-in-out, background-color 0.2s ease-in-out;
+}

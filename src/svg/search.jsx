@@ -1,5 +1,5 @@
 import styles from '@/app/page.module.css'
-export default function Search({className}) {
+export default function SearchIcon({className}) {
   return (
     <svg
       width="21"

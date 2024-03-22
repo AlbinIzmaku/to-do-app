@@ -1,6 +1,6 @@
 import styles from "@/styles/mySelect.module.css";
 
-export default function Light({ toggleTheme }) {
+export default function LightIcon({ toggleTheme }) {
   return (
     <svg
       width="40"

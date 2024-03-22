@@ -1,6 +1,6 @@
 import styles from "@/styles/mySelect.module.css";
 
-export default function Moon({toggleTheme}) {
+export default function MoonIcon({toggleTheme}) {
   return (
     <svg
       width="40"
