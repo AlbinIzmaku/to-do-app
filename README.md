@@ -1,36 +1,42 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+#To-Do-App
 
-## Getting Started
 
-First, run the development server:
+#Website Link: https://to-do-app-beta-red.vercel.app/
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+#Descrption
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+The To-Do App is a platform designed to assist users in organizing their daily tasks efficiently. It enables users to create, manage, and track their daily to-do lists, aiding them in achieving a successful day by completing their tasks effectively. The primary goal of this project is to provide a centralized platform for adults in Kosovo to prioritize and accomplish their tasks, thereby combating distractions such as social outings and materialism prevalent in the region.
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
 
-## Learn More
+#Key Features:
 
-To learn more about Next.js, take a look at the following resources:
+1.Task Management: Users can effortlessly add, delete, update, and save their tasks, ensuring smooth task management.
+2.Light and Dark Mode: The app offers both light and dark mode options, enhancing user experience and accessibility in various environments.
+3.Search Functionality: Users can easily search for specific tasks using the search input, facilitating quick access to desired information.
+4.Filtering Options: The app provides filtering options to categorize tasks based on different criteria, allowing users to organize their lists efficiently.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+#Installation To run the project locally, follow these steps:
 
-## Deploy on Vercel
+Clone the repository https://github.com/AlbinIzmaku/to-do-app Navigate to the project directory. Run npm install to install dependencies. Run npm run dev to start the development server.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+#Folder Structure
+
+app: Contains main page of website.
+components: UI components used across the application.
+styes: CSS modules for styling components.
+svg: SVG components used for icons and illustrations.
+
+
+#Technologies Used
+
+Next.js (version 14.0.4) React (version 18) React DOM (version 18) HTML CSS
+
+
+#Credits UI/UX Design by Dima Dzubenko
+
+
+#Contact For inquiries and feedback, please contact Albin Izmailu at albinizmaku2@gmail.com.
+
